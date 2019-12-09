@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Filter过滤器 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Filter过滤器 一、**概念：** 生活中的过滤器：净水器,空气净化器，土匪、  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。 过滤器的作用：          一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...二、**快速入门：** 1. 步骤：      1. 定义一个类，实现接口Filter      2. 复写方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Filter过滤器">
+<meta property="og:url" content="http://yoursite.com/2019/12/09/Filter过滤器/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Filter过滤器 一、**概念：** 生活中的过滤器：净水器,空气净化器，土匪、  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。 过滤器的作用：          一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...二、**快速入门：** 1. 步骤：      1. 定义一个类，实现接口Filter      2. 复写方法">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-09T09:53:23.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Filter过滤器">
+<meta name="twitter:description" content="Filter过滤器 一、**概念：** 生活中的过滤器：净水器,空气净化器，土匪、  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。 过滤器的作用：          一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...二、**快速入门：** 1. 步骤：      1. 定义一个类，实现接口Filter      2. 复写方法">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,157 +154,355 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Filter过滤器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Filter过滤器
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/09/Filter过滤器/" class="archive-article-date">
+
+        
+        <a href="/2019/12/09/Filter过滤器/" class="archive-article-date">
   	<time datetime="2019-12-09T09:53:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/09/Filter过滤器/">Filter过滤器</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Filter过滤器</strong></p>
+<p><strong>一、**</strong>概念：**</p>
+<pre><code>生活中的过滤器：净水器,空气净化器，土匪、
 
-        <div class="article-info info-on-right">
-          
-          
+web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特</code></pre><p>殊的功能。</p>
+<pre><code>过滤器的作用：
 
+        一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...</code></pre><p><strong>二、**</strong>快速入门：**</p>
+<pre><code>1. 步骤：
+
+    1. 定义一个类，实现接口Filter
+
+    2. 复写方法
+
+    3. 配置拦截路径
+
+        1. web.xml
+
+        2. 注解
+
+ 2. 代码：
+
+        @WebFilter(&quot;/*&quot;)//访问所有资源之前，都会执行该过滤器
+
+        public class FilterDemo1 implements Filter {
+
+            @Override
+
+            public void init(FilterConfig filterConfig) throws ServletException {
+
+            }
+
+            @Override
+
+            public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+
+                System.out.println(&quot;filterDemo1被执行了....&quot;);</code></pre><p>​            </p>
+<pre><code>                //放行
+
+                filterChain.doFilter(servletRequest,servletResponse);
+
+            }
+
+            @Override
+
+            public void destroy() {
+
+            }
+
+        }
+
+3. 过滤器细节：
+
+    1. web.xml配置    
+
+        &lt;filter&gt;
+
+            &lt;filter-name&gt;demo1&lt;/filter-name&gt;
+
+            &lt;filter-class&gt;cn.itcast.web.filter.FilterDemo1&lt;/filter-class&gt;
+
+        &lt;/filter&gt;
+
+        &lt;filter-mapping&gt;
+
+            &lt;filter-name&gt;demo1&lt;/filter-name&gt;
+
+            &lt;!-- 拦截路径 --&gt;
+
+            &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+
+        &lt;/filter-mapping&gt;
+
+    2. 过滤器执行流程
+
+        1. 执行过滤器
+
+        2. 执行放行后的资源
+
+        3. 回来执行过滤器放行代码下边的代码
+
+    3. 过滤器生命周期方法
+
+        1. init:在服务器启动后，会创建Filter对象，然后调用init方法。只执行一次</code></pre><p>。用于加载资源</p>
+<pre><code>2. doFilter:每一次请求被拦截资源时，会执行。执行多次
+
+3. destroy:在服务器关闭后，Filter对象被销毁。如果服务器是正常关闭，则</code></pre><p>会执行destroy方法。只执行一次。用于释放资源</p>
+<pre><code>4. 过滤器配置详解
+
+    拦截路径配置：</code></pre><p>\1. 具体资源路径： /index.jsp   只有访问index.jsp资源时，过滤器才</p>
+<p>会被执行</p>
+<pre><code>2. 拦截目录： /user/*    访问/user下的所有资源时，过滤器都会被执行
+
+3. 后缀名拦截： *.jsp        访问所有后缀名为jsp资源时，过滤器都会</code></pre><p>被执行</p>
+<pre><code>        4. 拦截所有资源：/*        访问所有资源时，过滤器都会被执行
+
+    拦截方式配置：资源被访问的方式
+
+        注解配置：
+
+            设置dispatcherTypes属性
+
+                1. REQUEST：默认值。浏览器直接请求资源
+
+                2. FORWARD：转发访问资源
+
+                3. INCLUDE：包含访问资源
+
+                4. ERROR：错误跳转资源
+
+                5. ASYNC：异步访问资源
+
+        web.xml配置
+
+             设置&lt;dispatcher&gt;&lt;/dispatcher&gt;标签即可        
+
+5. 过滤器链(配置多个过滤器)
+
+    执行顺序：如果有两个过滤器：过滤器1和过滤器2
+
+        1. 过滤器1
+
+        2. 过滤器2
+
+        3. 资源执行
+
+        4. 过滤器2
+
+        5. 过滤器1 </code></pre><p>过滤器先后顺序问题：</p>
+<pre><code>1. 注解配置：按照类名的字符串比较规则比较，值小的先执行
+
+    如： AFilter 和 BFilter，AFilter就先执行了。
+
+2. web.xml配置： &lt;filter-mapping&gt;谁定义在上边，谁先执行</code></pre><p>\4. 案例：</p>
+<pre><code>1. 案例1_登录验证
+
+    需求：
+
+        1. 访问day17_case案例的资源。验证其是否登录
+
+        2. 如果登录了，则直接放行。
+
+        3. 如果没有登录，则跳转到登录页面，提示&quot;您尚未登录，请先登录&quot;。
+
+2. 案例2_敏感词汇过滤
+
+    需求：
+
+        1. 对day17_case案例录入的数据进行敏感词汇过滤
+
+        2. 敏感词汇参考《敏感词汇.txt》
+
+        3. 如果是敏感词汇，替换为 *** 
+
+    分析：
+
+        1. 对request对象进行增强。增强获取参数相关方法
+
+        2. 放行。传递代理对象
+
+    增强对象的功能：
+
+        设计模式：一些通用的解决固定问题的方式
+
+        1. 装饰模式
+
+        2. 代理模式
+
+            概念：
+
+                1. 真实对象：被代理的对象
+
+                2. 代理对象：
+
+                3. 代理模式：代理对象代理真实对象，达到增强真实对象功</code></pre><p>能的目的</p>
+<pre><code>实现方式：
+
+   1. 静态代理：有一个类文件描述代理模式
+
+   2. 动态代理：在内存中形成代理类
+
+      实现步骤：
+
+          1. 代理对象和真实对象实现相同的接口
+
+          2. 代理对象 = Proxy.newProxyInstance();
+
+          3. 使用代理对象调用方法。
+
+          4. 增强方法
+
+
+
+
+       增强方式：
+
+          1. 增强参数列表
+
+          2. 增强返回值类型
+
+          3. 增强方法体执行逻辑</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/09/Filter过滤器/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/09/JdbcTemPlate/" class="archive-article-date">
-  	<time datetime="2019-12-09T09:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/09/JdbcTemPlate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JdbcTemPlate</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/09/JdbcTemPlate/">JdbcTemPlate</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/06/鱼仔/" class="archive-article-date">
-  	<time datetime="2019-12-06T03:16:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/06/鱼仔/">鱼仔</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/雪/" class="archive-article-date">
-  	<time datetime="2019-10-11T04:44:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/雪/">雪</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-11T03:51:23.903Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -323,8 +525,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
