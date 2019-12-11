@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Filter过滤器 | Hexo</title>
+  <title>ajax与json | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Filter过滤器 一、**概念：** 生活中的过滤器：净水器,空气净化器，土匪、  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。 过滤器的作用：          一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...二、**快速入门：** 1. 步骤：      1. 定义一个类，实现接口Filter      2. 复写方法">
+  <meta name="description" content="2.5.1、ajax**概念：**  ASynchronous JavaScript And XML    异步的JavaScript 和 XML 要想理解ajax应该先了解异步与同步的概念 ​    1. 异步和同步：客户端和服务器端相互通信的基础上 ​            客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。 ​            客户端不需要等待服务器端的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Filter过滤器">
-<meta property="og:url" content="http://yoursite.com/2019/12/09/Filter过滤器/index.html">
+<meta property="og:title" content="ajax与json">
+<meta property="og:url" content="http://yoursite.com/2019/12/11/ajax与json/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Filter过滤器 一、**概念：** 生活中的过滤器：净水器,空气净化器，土匪、  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。 过滤器的作用：          一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...二、**快速入门：** 1. 步骤：      1. 定义一个类，实现接口Filter      2. 复写方法">
+<meta property="og:description" content="2.5.1、ajax**概念：**  ASynchronous JavaScript And XML    异步的JavaScript 和 XML 要想理解ajax应该先了解异步与同步的概念 ​    1. 异步和同步：客户端和服务器端相互通信的基础上 ​            客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。 ​            客户端不需要等待服务器端的">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-09T09:53:23.837Z">
+<meta property="og:updated_time" content="2019-12-11T00:01:17.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Filter过滤器">
-<meta name="twitter:description" content="Filter过滤器 一、**概念：** 生活中的过滤器：净水器,空气净化器，土匪、  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能。 过滤器的作用：          一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...二、**快速入门：** 1. 步骤：      1. 定义一个类，实现接口Filter      2. 复写方法">
+<meta name="twitter:title" content="ajax与json">
+<meta name="twitter:description" content="2.5.1、ajax**概念：**  ASynchronous JavaScript And XML    异步的JavaScript 和 XML 要想理解ajax应该先了解异步与同步的概念 ​    1. 异步和同步：客户端和服务器端相互通信的基础上 ​            客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。 ​            客户端不需要等待服务器端的">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,227 +154,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Filter过滤器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ajax与json" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Filter过滤器
+      ajax与json
     </h1>
   
 
         
-        <a href="/2019/12/09/Filter过滤器/" class="archive-article-date">
-  	<time datetime="2019-12-09T09:53:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
+        <a href="/2019/12/11/ajax与json/" class="archive-article-date">
+  	<time datetime="2019-12-11T00:00:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Filter过滤器</strong></p>
-<p><strong>一、**</strong>概念：**</p>
-<pre><code>生活中的过滤器：净水器,空气净化器，土匪、
+        <p> <strong>2.5.1、ajax**</strong>概念：** </p>
+<p>ASynchronous JavaScript And XML    异步的JavaScript 和 XML</p>
+<p>要想理解ajax应该先了解异步与同步的概念</p>
+<p>​    1. 异步和同步：客户端和服务器端相互通信的基础上</p>
+<p>​            客户端必须等待服务器端的响应。在等待的期间客户端不能做其他操作。</p>
+<p>​            客户端不需要等待服务器端的响应。在服务器处理请求的过程中，客户端可</p>
+<p>以进行其他的操作。</p>
+<p>​    Ajax 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>传统的网页（不使用 Ajax）如果需要更新内容，必须重载整个网页页面。提升用户的体验</p>
+<p><strong>2.5.2、**</strong>实现方式：**</p>
+<p>\1. 原生的JS实现方式（了解）</p>
+<p>​      1.创建核心对象</p>
+<p>​         var xmlhttp;</p>
+<p>​         if (window.XMLHttpRequest){</p>
+<p>// code for IE7+, Firefox, Chrome, Opera, Safari</p>
+<p>​                    xmlhttp=new XMLHttpRequest();</p>
+<p>​          }else{</p>
+<p>// code for IE6, IE5</p>
+<p>​                    xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);</p>
+<p>​          }</p>
+<p>​       2. 建立连接</p>
+<p>​        /*</p>
+<p>​          参数：</p>
+<p>​             1. 请求方式：GET、POST</p>
+<p>​                 get方式，请求参数在URL后边拼接。send方法为空参</p>
+<p>​                 post方式，请求参数在send方法中定义</p>
+<p>​             2. 请求的URL：</p>
+<p>​             3. 同步或异步请求：true（异步）或 false（同步）</p>
+<p>​         */</p>
+<p>​          xmlhttp.open(“GET”,”ajaxServlet?username=tom”,true);</p>
+<p>​      3.发送请求</p>
+<p>​          xmlhttp.send();</p>
+<p>​      4.接受并处理来自服务器的响应结果</p>
+<p>​          获取方式 ：xmlhttp.responseText</p>
+<p>​          什么时候获取？当服务器响应成功后再获取</p>
+<p>​          当xmlhttp对象的就绪状态改变时，触发事件onreadystatechange。</p>
+<p>​           xmlhttp.onreadystatechange=function(){</p>
+<p>​               //判断readyState就绪状态是否为4，判断status响应状态码是否为200</p>
+<p>​               if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200){</p>
+<p>​                           //获取服务器的响应结果</p>
+<p>​                            var responseText = xmlhttp.responseText;</p>
+<p>​                            alert(responseText);</p>
+<p>​                }</p>
+<p>​           }</p>
+<p>2、jquery方式实现</p>
+<p>\1. $.ajax()</p>
+<p>​        语法：$.ajax({键值对});</p>
+<p>​        使用$.ajax()发送异步请求</p>
+<p>​        $.ajax({</p>
+<p>​           url:”ajaxServlet1111” , // 请求路径</p>
+<p>​           type:”POST” , //请求方式</p>
+<p>​           data: “username=jack&amp;age=23”,//请求参数</p>
+<p>​           data:{“username”:”jack”,”age”:23},</p>
+<p>​               success:function (data) {</p>
+<p>​                     alert(data);</p>
+<p>​                },//响应成功后的回调函数</p>
+<p>​                error:function () {</p>
+<p>​                      alert(“出错啦…”)</p>
+<p>​                },//表示如果请求响应出现错误，会执行的回调函数</p>
+<p>​                dataType:”text”//设置接受到的响应数据的格式</p>
+<p>​            });</p>
+<p>​      2. $.get()：发送get请求</p>
+<p>​         语法：$.get(url, [data], [callback], [type])</p>
+<p>​             参数：</p>
+<p>​                  url：请求路径</p>
+<p>​                  data：请求参数</p>
+<p>​                  callback：回调函数</p>
+<p>​                  type：响应结果的类型</p>
+<p>​      3. $.post()：发送post请求</p>
+<p>​         语法：$.post(url, [data], [callback], [type])</p>
+<p>​            参数：</p>
+<p>​                   url：请求路径</p>
+<p>​                   data：请求参数</p>
+<p>​                   callback：回调函数</p>
+<p>​                   type：响应结果的类型</p>
+<p><strong>2.5.3、json讲解</strong></p>
+<p>\1. 概念： JavaScript Object Notation        JavaScript对象表示法</p>
+<p>​        Person p = new Person();</p>
+<p>​        p.setName(“张三”);</p>
+<p>​        p.setAge(23);</p>
+<p>​        p.setGender(“男”);</p>
+<p>​        var p = {“name”:”张三”,”age”:23,”gender”:”男”};</p>
+<p>json现在多用于存储和交换文本信息的语法</p>
+<p>​        进行数据的传输</p>
+<p>​        JSON 比 XML 更小、更快，更易解析。</p>
+<p>\2. 语法：</p>
+<p>​    1. 基本规则</p>
+<p>​       数据在名称/值对中：json数据是由键值对构成的</p>
+<p>​          键用引号(单双都行)引起来，也可以不使用引号</p>
+<p>​          值得取值类型：</p>
+<p>​                    1. 数字（整数或浮点数）</p>
+<p>​                    2. 字符串（在双引号中）</p>
+<p>​                    3. 逻辑值（true 或 false）</p>
+<p>​                    4. 数组（在方括号中）    {“persons”:[{},{}]}</p>
+<p>​                    5. 对象（在花括号中） {“address”:{“province”：”陕西”….}}</p>
+<p>​                    6. null</p>
+<p>​            数据由逗号分隔：多个键值对由逗号分隔</p>
+<p>​            花括号保存对象：使用{}定义json 格式</p>
+<p>​            方括号保存数组：[]</p>
+<p>​     2. 获取数据:</p>
+<p>​            1. json对象.键名</p>
+<p>​            2. json对象[“键名”]</p>
+<p>​            3. 数组对象[索引]</p>
+<p>​            4. 遍历</p>
+<p>​            //1.定义基本格式</p>
+<p>​            var person = {“name”: “张三”, age: 23, ‘gender’: true};</p>
+<p>​            var ps = [{“name”: “张三”, “age”: 23, “gender”: true},</p>
+<p>​                   {“name”: “李四”, “age”: 24, “gender”: true},</p>
+<p>​                   {“name”: “王五”, “age”: 25, “gender”: false}];</p>
+<p>​             //获取person对象中所有的键和值</p>
+<p>​             //for in 循环</p>
+<p>​              for(var key in person){</p>
+<p>​                    这样的方式获取不行。因为相当于  person.”name”</p>
+<p>​                    alert(key + “:” + person.key);</p>
+<p>​                    alert(key+”:”+person[key]);</p>
+<p>​               }</p>
+<p>​             //获取ps中的所有值</p>
+<p>​              for (var i = 0; i &lt; ps.length; i++) {</p>
+<p>​                   var p = ps[i];</p>
+<p>​                   for(var key in p){</p>
+<p>​                            alert(key+”:”+p[key]);</p>
+<p>​                   }</p>
+<p>​              }</p>
+<p>​    3. JSON数据和Java对象的相互转换</p>
+<p> JSON解析器：</p>
+<p>​         常见的解析器：Jsonlib，Gson，fastjson，jackson</p>
+<p>​         1. JSON转为Java对象</p>
+<p>​            1. 导入jackson的相关jar包</p>
+<p>​            2. 创建Jackson核心对象 ObjectMapper</p>
+<p>​            3. 调用ObjectMapper的相关方法进行转换</p>
+<p>​                1. readValue(json字符串数据,Class)</p>
+<p>\2. Java对象转换JSON</p>
+<p>​            1. 使用步骤：</p>
+<p>​                1. 导入jackson的相关jar包</p>
+<p>​                2. 创建Jackson核心对象 ObjectMapper</p>
+<p>​                3. 调用ObjectMapper的相关方法进行转换</p>
+<p>​                  1. 转换方法：</p>
+<p>​                     writeValue(参数1，obj):</p>
+<p>​                       参数1：</p>
+<p>​                         File：将obj对象转换为JSON字符串，并保存到指定的文件中</p>
+<p>​                         Writer：将obj对象转换为JSON字符串，并将json数据填充</p>
+<p>到字符输出流中</p>
+<p>​                         OutputStream：将obj对象转换为JSON字符串，并将json数</p>
+<p>据填充到字节输出流中</p>
+<p>​                         writeValueAsString(obj):将对象转为json字符串</p>
+<p>​                    2. 注解：</p>
+<p>​                        1. @JsonIgnore：排除属性。</p>
+<p>​                        2. @JsonFormat：属性值得格式化</p>
+<p>​                           @JsonFormat(pattern = “yyyy-MM-dd”)</p>
+<p>\3. 复杂java对象转换</p>
+<p>​                        1. List：数组</p>
+<p>​                        2. Map：对象格式一致</p>
 
-web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特</code></pre><p>殊的功能。</p>
-<pre><code>过滤器的作用：
-
-        一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤...</code></pre><p><strong>二、**</strong>快速入门：**</p>
-<pre><code>1. 步骤：
-
-    1. 定义一个类，实现接口Filter
-
-    2. 复写方法
-
-    3. 配置拦截路径
-
-        1. web.xml
-
-        2. 注解
-
- 2. 代码：
-
-        @WebFilter(&quot;/*&quot;)//访问所有资源之前，都会执行该过滤器
-
-        public class FilterDemo1 implements Filter {
-
-            @Override
-
-            public void init(FilterConfig filterConfig) throws ServletException {
-
-            }
-
-            @Override
-
-            public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-
-                System.out.println(&quot;filterDemo1被执行了....&quot;);</code></pre><p>​            </p>
-<pre><code>                //放行
-
-                filterChain.doFilter(servletRequest,servletResponse);
-
-            }
-
-            @Override
-
-            public void destroy() {
-
-            }
-
-        }
-
-3. 过滤器细节：
-
-    1. web.xml配置    
-
-        &lt;filter&gt;
-
-            &lt;filter-name&gt;demo1&lt;/filter-name&gt;
-
-            &lt;filter-class&gt;cn.itcast.web.filter.FilterDemo1&lt;/filter-class&gt;
-
-        &lt;/filter&gt;
-
-        &lt;filter-mapping&gt;
-
-            &lt;filter-name&gt;demo1&lt;/filter-name&gt;
-
-            &lt;!-- 拦截路径 --&gt;
-
-            &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-
-        &lt;/filter-mapping&gt;
-
-    2. 过滤器执行流程
-
-        1. 执行过滤器
-
-        2. 执行放行后的资源
-
-        3. 回来执行过滤器放行代码下边的代码
-
-    3. 过滤器生命周期方法
-
-        1. init:在服务器启动后，会创建Filter对象，然后调用init方法。只执行一次</code></pre><p>。用于加载资源</p>
-<pre><code>2. doFilter:每一次请求被拦截资源时，会执行。执行多次
-
-3. destroy:在服务器关闭后，Filter对象被销毁。如果服务器是正常关闭，则</code></pre><p>会执行destroy方法。只执行一次。用于释放资源</p>
-<pre><code>4. 过滤器配置详解
-
-    拦截路径配置：</code></pre><p>\1. 具体资源路径： /index.jsp   只有访问index.jsp资源时，过滤器才</p>
-<p>会被执行</p>
-<pre><code>2. 拦截目录： /user/*    访问/user下的所有资源时，过滤器都会被执行
-
-3. 后缀名拦截： *.jsp        访问所有后缀名为jsp资源时，过滤器都会</code></pre><p>被执行</p>
-<pre><code>        4. 拦截所有资源：/*        访问所有资源时，过滤器都会被执行
-
-    拦截方式配置：资源被访问的方式
-
-        注解配置：
-
-            设置dispatcherTypes属性
-
-                1. REQUEST：默认值。浏览器直接请求资源
-
-                2. FORWARD：转发访问资源
-
-                3. INCLUDE：包含访问资源
-
-                4. ERROR：错误跳转资源
-
-                5. ASYNC：异步访问资源
-
-        web.xml配置
-
-             设置&lt;dispatcher&gt;&lt;/dispatcher&gt;标签即可        
-
-5. 过滤器链(配置多个过滤器)
-
-    执行顺序：如果有两个过滤器：过滤器1和过滤器2
-
-        1. 过滤器1
-
-        2. 过滤器2
-
-        3. 资源执行
-
-        4. 过滤器2
-
-        5. 过滤器1 </code></pre><p>过滤器先后顺序问题：</p>
-<pre><code>1. 注解配置：按照类名的字符串比较规则比较，值小的先执行
-
-    如： AFilter 和 BFilter，AFilter就先执行了。
-
-2. web.xml配置： &lt;filter-mapping&gt;谁定义在上边，谁先执行</code></pre><p>\4. 案例：</p>
-<pre><code>1. 案例1_登录验证
-
-    需求：
-
-        1. 访问day17_case案例的资源。验证其是否登录
-
-        2. 如果登录了，则直接放行。
-
-        3. 如果没有登录，则跳转到登录页面，提示&quot;您尚未登录，请先登录&quot;。
-
-2. 案例2_敏感词汇过滤
-
-    需求：
-
-        1. 对day17_case案例录入的数据进行敏感词汇过滤
-
-        2. 敏感词汇参考《敏感词汇.txt》
-
-        3. 如果是敏感词汇，替换为 *** 
-
-    分析：
-
-        1. 对request对象进行增强。增强获取参数相关方法
-
-        2. 放行。传递代理对象
-
-    增强对象的功能：
-
-        设计模式：一些通用的解决固定问题的方式
-
-        1. 装饰模式
-
-        2. 代理模式
-
-            概念：
-
-                1. 真实对象：被代理的对象
-
-                2. 代理对象：
-
-                3. 代理模式：代理对象代理真实对象，达到增强真实对象功</code></pre><p>能的目的</p>
-<pre><code>实现方式：
-
-   1. 静态代理：有一个类文件描述代理模式
-
-   2. 动态代理：在内存中形成代理类
-
-      实现步骤：
-
-          1. 代理对象和真实对象实现相同的接口
-
-          2. 代理对象 = Proxy.newProxyInstance();
-
-          3. 使用代理对象调用方法。
-
-          4. 增强方法
-
-
-
-
-       增强方式：
-
-          1. 增强参数列表
-
-          2. 增强返回值类型
-
-          3. 增强方法体执行逻辑</code></pre>
       
 
       
@@ -453,7 +405,7 @@ web中的过滤器：当访问服务器的资源时，过滤器可以将请求�
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/09/Filter过滤器/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/11/ajax与json/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -467,18 +419,9 @@ web中的过滤器：当访问服务器的资源时，过滤器可以将请求�
   
 <nav id="article-nav">
   
-    <a href="/2019/12/11/ajax与json/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ajax与json
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/12/09/JdbcTemPlate/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JdbcTemPlate</div>
+    <a href="/2019/12/09/Filter过滤器/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Filter过滤器</div>
       <i class="icon-circle-right"></i>
     </a>
   
