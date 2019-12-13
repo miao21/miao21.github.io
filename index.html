@@ -152,6 +152,112 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-EL表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/13/EL表达式/">EL表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/13/EL表达式/" class="archive-article-date">
+  	<time datetime="2019-12-13T02:30:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><em>\</em>EL表达式**</strong></p>
+<p> <strong><em>\</em>1. 概念**</strong>：Expression Language 表达式语言</p>
+<p><strong><em>\</em>2. 作用：**</strong>替换和简化jsp页面中java代码的编写</p>
+<p><strong><em>\</em>3. 语法：**</strong>${表达式}</p>
+<p><strong><em>\</em>4. 注意：**</strong></p>
+<p>​     jsp默认支持el表达式的。如果要忽略el表达式</p>
+<p>​     1. 设置jsp中page指令中：isELIgnored=”true” 忽略当前jsp页面中所有的el表达式</p>
+<p>​     2. ${表达式} ：忽略当前这个el表达式</p>
+<p><strong><em>\</em>5. 使用：**</strong></p>
+<p>​        1. 运算：</p>
+<p>​            运算符：</p>
+<p>​                1. 算数运算符： + - * /(div) %(mod)</p>
+<p>​                2. 比较运算符： &gt; &lt; &gt;= &lt;= == !=</p>
+<p>​                3. 逻辑运算符： &amp;&amp;(and) ||(or) !(not)</p>
+<p>​                4. 空运算符： empty</p>
+<p>​                 功能：用于判断字符串、集合、数组对象是否为null或者长度是否为0</p>
+<p>​                  ${empty list}:判断字符串、集合、数组对象是否为null或者长度为0</p>
+<p>​                    ${not empty str}:表示判断字符串、集合、数组对象是否不为null </p>
+<p>并且 长度&gt;0</p>
+<p>​         2. 获取值</p>
+<p>​            1. el表达式只能从域对象中获取值</p>
+<p>​            2. 语法：</p>
+<p>​                1. ${域名称.键名}：从指定域中获取指定键的值</p>
+<p>​                    域名称：</p>
+<p>​                        1. pageScope        –&gt; pageContext</p>
+<p>​                        2. requestScope     –&gt; request</p>
+<p>​                        3. sessionScope     –&gt; session</p>
+<p>​                        4. applicationScope –&gt; application（ServletContext）</p>
+<p>​                    举例：在request域中存储了name=张三</p>
+<p>​                    获取：${requestScope.name}</p>
+<p>\2. ${键名}：表示依次从最小的域中查找是否有该键对应的值，直到找</p>
+<p>到为止。</p>
+<p>​                3. 获取对象、List集合、Map集合的值</p>
+<p>​                    1. 对象：${域名称.键名.属性名}</p>
+<p>​                        本质上会去调用对象的getter方法</p>
+<p>​                    2. List集合：${域名称.键名[索引]}</p>
+<p>​                    3. Map集合：</p>
+<p>​                        ${域名称.键名.key名称}</p>
+<p>​                        ${域名称.键名[“key名称”]}</p>
+<p>​         3. 隐式对象：</p>
+<p>​             el表达式中有11个隐式对象</p>
+<p>​             pageContext：</p>
+<p>​                 获取jsp其他八个内置对象</p>
+<p>​                     ${pageContext.request.contextPath}：动态获取虚拟目录</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/13/EL表达式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ajax与json" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
